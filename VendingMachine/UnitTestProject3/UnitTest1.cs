@@ -9,8 +9,8 @@ namespace UnitTestProject3
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
-        {
+         public void TestMethod1()
+       {
 
             List<ShowDetails> expected = new List<ShowDetails>();
 
@@ -48,10 +48,53 @@ namespace UnitTestProject3
             //Assert.AreEqual(expected[0], actual[0]);
             CollectionAssert.AreEqual(expected, actual);
         }
-        /* public void TestMethod2()
+         *public void TestMethod2()
          {
-             List<TheaterDetails> expected = new List<TheaterDetails>;
-             expected.Add(2);
-         }*/
+            bool actual;
+            MoviesDetails avengers = new MoviesDetails();
+            Vendor vendorObject = new Vendor();
+            actual = vendorObject.AddToList(avengers);
+            Assert.AreEqual(true, actual);
+         }
+        public void TestMethod3()
+        {
+            bool actual;
+            TheaterDetails luxe = new TheaterDetails();
+            Vendor vendorObject = new Vendor();
+            actual = vendorObject.AddToList(luxe);
+            Assert.AreEqual(true, actual);
+        }
+        public void TestMethod4()
+        {
+            bool actual;
+            ShowDetails show6 = new ShowDetails();
+            Vendor vendorObject = new Vendor();
+            actual = vendorObject.AddToList(show6);
+            Assert.AreEqual(true, actual);
+        }
+        public void TestMethod5()
+        {
+            List<MoviesDetails> actual = new List<MoviesDetails>();
+            List<MoviesDetails> expected = new List<MoviesDetails>()
+            {
+                new MoviesDetails{ movie_id=1 , movie_name="AVENGERS: ENDGAME" } ,
+                new MoviesDetails{ movie_id=2 , movie_name= "STAR WARS: THE RISE OF SKYWALKER" } ,
+                new MoviesDetails{ movie_id=3  , movie_name="SPIDERMAN: FAR FROM HOME" },
+                new MoviesDetails{ movie_id=0  , movie_name=null }
+            };
+            Vendor vendorObject = new Vendor();
+            MoviesDetails avengers = new MoviesDetails();  
+            actual = vendorObject.MoviesDetails();
+            vendorObject.AddToList(avengers);
+            CollectionAssert.AreEqual(expected, actual);
+        }
+        public void TestMethod6()
+        {
+            bool actual;
+            Ticket ticket = new Ticket();
+            Vendor vendorObject = new Vendor();
+            actual = vendorObject.AddToList(ticket);
+            Assert.AreEqual(true, actual);
+        }
     }
 }

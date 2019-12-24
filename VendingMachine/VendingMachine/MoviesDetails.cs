@@ -4,22 +4,22 @@
 
     public class MoviesDetails
     {
-        private int _id;
-        private string _name;
+        public int movie_id;
+        public string movie_name;
 
         public void SetId(int movieId)
         {
-            _id = movieId;
+            movie_id = movieId;
         }
 
         public void SetName(string movieName)
         {
-            _name = movieName;
+            movie_name = movieName;
         }
 
         public string GetName()
         {
-            return _name;
+            return movie_name;
         }
     }
     public class Ticket

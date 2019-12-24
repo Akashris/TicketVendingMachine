@@ -4,29 +4,29 @@
     using System.Collections.Generic;
     public class TheaterDetails
     {
-        private string _name;
-        private int _capacity;
+        private string theatre_name;
+        private int theatre_capacity;
 
 
         public void SetName(string theaterName)
         {
-            _name = theaterName;
+            theatre_name = theaterName;
         }
 
         public void SetCapacity(int theaterCapacity)
         {
-            _capacity = theaterCapacity;
+            theatre_capacity = theaterCapacity;
         }
 
 
         public string GetName()
         {
-            return _name;
+            return theatre_name;
         }
 
         public int GetCapacity()
         {
-            return _capacity;
+            return theatre_capacity;
         }
 
 

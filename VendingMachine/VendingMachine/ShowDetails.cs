@@ -2,39 +2,39 @@
 {
     public class ShowDetails
     {
-        private string _showTime;
-        private TheaterDetails _theater;
-        private MoviesDetails _movie;
+        private string show_Time;
+        private TheaterDetails theater_details;
+        private MoviesDetails movie_details;
 
 
         public void SetShowTime(string showTime)
         {
-            _showTime = showTime;
+            show_Time = showTime;
         }
 
         public void SetTheater(TheaterDetails theater)
         {
-            _theater = theater;
+            theater_details = theater;
         }
 
         public void SetMovie(MoviesDetails movie)
         {
-            _movie = movie;
+            movie_details = movie;
         }
 
         public string GetShowTime()
         {
-            return _showTime;
+            return show_Time;
         }
 
         public TheaterDetails GetTheater()
         {
-            return _theater;
+            return theater_details;
         }
 
         public MoviesDetails GetMovie()
        {
-            return _movie;
+            return movie_details;
         }
     }
 }
