@@ -9,7 +9,7 @@ namespace UnitTestProject3
     public class UnitTest1
     {
         [TestMethod]
-         public void TestMethod1()
+        public void TestMethod1()
        {
 
             List<ShowDetails> expected = new List<ShowDetails>();
@@ -48,7 +48,7 @@ namespace UnitTestProject3
             //Assert.AreEqual(expected[0], actual[0]);
             CollectionAssert.AreEqual(expected, actual);
         }
-         *public void TestMethod2()
+         public void TestMethod2()
          {
             bool actual;
             MoviesDetails avengers = new MoviesDetails();
@@ -95,6 +95,50 @@ namespace UnitTestProject3
             Vendor vendorObject = new Vendor();
             actual = vendorObject.AddToList(ticket);
             Assert.AreEqual(true, actual);
+        }
+        public void TestMethod7()
+        {
+            string actual,expected="10:00 AM";
+            ShowDetails show1 = new ShowDetails();
+            show1.SetShowTime("10:00 AM");
+            actual = show1.GetShowTime();
+            Assert.AreEqual(expected, actual);
+        }
+
+        public void TestMethod8()
+        {
+            MoviesDetails avengers = new MoviesDetails();
+            string expected = "AVENGERS: ENDGAME";
+            avengers.SetName("AVENGERS: ENDGAME");
+            string actual = avengers.GetName();
+            Assert.AreEqual(expected, actual);
+        }
+        public void TestMethod9()
+        {
+            MoviesDetails avengers = new MoviesDetails();
+            int expected = 1;
+            avengers.SetId(1);
+            int actual = avengers.GetId();
+            Assert.AreEqual(expected, actual);
+        }
+        public void TestMethod10()
+        {
+            
+            string expected = "Satyam Cinemas";
+            TheaterDetails satyam = new TheaterDetails();
+            satyam.SetName("Satyam Cinemas");
+            
+            string actual = satyam.GetName();
+            Assert.AreEqual(expected, actual);
+        }
+        public void TestMethod11()
+        {
+
+            int expected = 50;
+            TheaterDetails satyam = new TheaterDetails();
+            satyam.SetCapacity(50);
+            int actual = satyam.GetCapacity();
+            Assert.AreEqual(expected, actual);
         }
     }
 }

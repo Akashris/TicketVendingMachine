@@ -21,6 +21,11 @@
         {
             return movie_name;
         }
+        public int GetId()
+        {
+            return movie_id;
+        }
+
     }
     public class Ticket
     {
